@@ -7,7 +7,7 @@
 ---
 
 
-| \# | Problems | Solution | Note |
+| \# | Problem Address | Solution | Note |
 |----|----------|-----------|------|
 | 001 | [Two Sum](https://leetcode.com/problems/two-sum/) | [&nbsp;C++](./leetcode/001.Two_Sum/README.MD) |  |
 | 006 | [ZigZag Conversion](https://leetcode.com/problems/Two-Sum/) | [&nbsp;C++](./leetcode/006.ZigZag_Conversion/readme.md) |  |
