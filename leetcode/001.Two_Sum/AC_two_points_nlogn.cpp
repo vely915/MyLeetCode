@@ -4,18 +4,32 @@ public:
     vector<int> twoSum (vector<int> &numbers, int target)
     {
         int count = numbers.size();
+        int left = 0, right = count-1;
         vector<int> index;
-        for ( int i = 0; i < count; i++) 
+        vector<int> sorted(numbers);
+        std::sort(sorted.begin(),sorted.end());
+        while(left < right)
         {
-        	for ( int j = i+1; j < count; j++) 
-        	{
-        		if (numbers[i] + numbers[j] == target) 
-        		{
-        			index.push_back(j+1);
-        			index.push_back(i+1);
-        			return index;
-        		}
-        	}
+	        if(sorted[left] + sorted[right] == target)
+	        {
+		        for ( int i = 0; i < count; i++) 
+		        {
+		        	if (numbers[i] == sorted[left])
+                        index.push_back(i + 1);
+                    else if (numbers[i] == sorted[right])
+                        index.push_back(i + 1);
+                    if (index.size() == 2)
+                        return index;
+		        } 
+	        }
+			else if (sorted[left] + sorted[right] > target) 
+			{
+                right--;
+            } 
+            else 
+            {
+                left++;
+            }
         }
     }
 };
