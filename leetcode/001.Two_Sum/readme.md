@@ -1,7 +1,5 @@
 # 1 Two Sum
-
 ## Question:
-
 > Given an array of integers, find two numbers such that they add up to a specific target number.
 > 
 > The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
@@ -11,17 +9,13 @@
 > Input: numbers={2, 7, 11, 15}, target=9
 > 
 > Output: index1=1, index2=2
->
 
----
-
+------
 ####方法 1
 >保存一个副本，对副本排序，然后左右夹逼，最后找到副本所对应的原数组下标，排序 O(nlogn)，左右夹逼 O(n)，找下标O(n)，最终时间复杂度为O(nlogn)。
->
->Runtime: 12ms
->
 
-```c++
+>Runtime: 12ms
+```cpp
 class Solution
 {
 public:
@@ -57,16 +51,13 @@ public:
         }
     }
 };
-
+```
 ---
-
 ####方法 2
 >hash。用一个哈希表，存储每个数对应的下标，复杂度 O(n)
->
->Runtime: 16ms
->
 
-```c++
+>Runtime: 16ms
+```cpp
 class Solution
 {
 public:
@@ -87,16 +78,13 @@ public:
         return ret;
     }
 };
-
+```
 ---
-
 ####方法 3
 >暴力查找，复杂度 O(n2)
->
->Runtime: 568 ms
->
 
-```c++
+>Runtime: 568 ms
+```cpp
 class Solution
 {
 public:
@@ -118,6 +106,6 @@ public:
         }
     }
 };
-
+```
 
 
