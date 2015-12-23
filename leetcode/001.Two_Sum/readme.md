@@ -11,12 +11,16 @@
 > Input: numbers={2, 7, 11, 15}, target=9
 > 
 > Output: index1=1, index2=2
+>
 
 ---
+
 ####方法 1
 >保存一个副本，对副本排序，然后左右夹逼，最后找到副本所对应的原数组下标，排序 O(nlogn)，左右夹逼 O(n)，找下标O(n)，最终时间复杂度为O(nlogn)。
+>
 ### AC Code:
 >Runtime: 12ms
+>
 
 ```c++
 class Solution
@@ -56,10 +60,13 @@ public:
 };
 
 ---
+
 ####方法 2
 >hash。用一个哈希表，存储每个数对应的下标，复杂度 O(n)
+>
 ### AC Code:
 >Runtime: 16ms
+>
 
 ```c++
 class Solution
@@ -84,10 +91,13 @@ public:
 };
 
 ---
+
 ####方法 3
 >暴力查找，复杂度 O(n2)
+>
 ### AC Code:
 >Runtime: 568 ms
+>
 
 ```c++
 class Solution
